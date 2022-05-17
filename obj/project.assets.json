@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Karim-Chaar\\.nuget\\packages\\": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Karim-Chaar\\source\\repos\\CommandeProduct\\CommandeProduct.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\Source\\Repos\\CommandeProduits\\CommandeProduct.csproj",
       "projectName": "CommandeProduct",
-      "projectPath": "C:\\Users\\Karim-Chaar\\source\\repos\\CommandeProduct\\CommandeProduct.csproj",
-      "packagesPath": "C:\\Users\\Karim-Chaar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Karim-Chaar\\source\\repos\\CommandeProduct\\obj\\",
+      "projectPath": "C:\\Users\\lenovo\\Source\\Repos\\CommandeProduits\\CommandeProduct.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lenovo\\Source\\Repos\\CommandeProduits\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Karim-Chaar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
