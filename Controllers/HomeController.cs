@@ -23,10 +23,23 @@ namespace CommandeProduct.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Client()
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult AllClients()
+        {
+            return View(Repository.getAllClients());
+        }
+        [HttpPost]
+        public IActionResult Client(Client c)
+        {
+            Repository.addClient(c);
+            return View("ConfirmPage",c);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

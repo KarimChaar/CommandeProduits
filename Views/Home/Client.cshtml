@@ -1,6 +1,36 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model Client
 @{
     <h1>Hello from Client view </h1>
+
+    <form asp-action="client" method="post">
+        <h1>Client Form</h1>
+        <div>
+            <label asp-for="ClientNom">Nom</label>
+            <input asp-for="ClientNom"/>
+        </div>
+           Adresse
+        <div>    
+            <label asp-for="LocationRue">Rue</label>
+            <input asp-for="LocationRue"/>
+        </div>
+        <div>    
+            <label asp-for="LocationVille">Ville</label>
+            <input asp-for="LocationVille"/>
+        </div>
+        <div>    
+            <label asp-for="LocationPays">Pays</label>
+            <input asp-for="LocationPays"/>
+        </div>
+
+        <div>    
+            <label asp-for="Type_C">Type</label>
+            <select asp-for="Type_C" asp-items="@Html.GetEnumSelectList<type>()">
+   <option selected="selected" value="">Please select</option>
+</select>
+        </div>
+        <button type="submit"> save</button>
+    </form>
 }
