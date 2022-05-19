@@ -1,4 +1,5 @@
 ﻿using CommandeProduct.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CommandeProduct.Models
 {
@@ -15,9 +16,18 @@ namespace CommandeProduct.Models
 
         public static void addClient(Client c)
         {
-            CPDbContext db = new CPDbContext();
-            db.Clients.Add(c);
-            db.SaveChanges();
+            if (c.Cin.Equals(""))
+            {
+                CPDbContext db = new CPDbContext();
+                db.Clients.Add(c);
+                db.SaveChanges();
+            }
+            else
+            {
+                CPDbContext db = new CPDbContext();
+                db.Entry(c).State = EntityState.Modified;
+                db.SaveChanges();
+            }
         }
 
         public static void deleteClient(string id)

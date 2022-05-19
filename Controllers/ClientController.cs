@@ -8,7 +8,7 @@ namespace CommandeProduct.Controllers
     public class ClientController : Controller
     {
         [HttpGet]
-        public IActionResult Client()
+        public IActionResult Client(Client x)
         {
             return View();
         }
@@ -18,10 +18,13 @@ namespace CommandeProduct.Controllers
             return View(Repository.getAllClients());
         }
         [HttpPost]
-        public IActionResult Client(Client c)
+        public IActionResult addClient(Client c)
         {
-            Repository.addClient(c);
-            return View("ConfirmPage", c);
+            
+               Repository.addClient(c);
+               return View("ConfirmPage", c);
+            
+ 
         }
 
         /*public IActionResult updateClient(string id)

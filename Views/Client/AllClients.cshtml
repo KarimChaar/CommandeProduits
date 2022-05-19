@@ -32,7 +32,7 @@
                         <td>@client.LocationPays</td>
                         <td>@client.Type_C</td>
                         <td>
-
+                        <a href="@Url.Action("Client",new {client.Cin,client.ClientNom,client.LocationRue,client.LocationVille,client.LocationPays,client.Type_C})" class="btn btn-secondary"> Update</a>
                         @using(Html.BeginForm("Delete","Client",new {id = client.Cin})
                         ){
                             <input type="submit" value="Delete" class="btn btn-danger"/>
