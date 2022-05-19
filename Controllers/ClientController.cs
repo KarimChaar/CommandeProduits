@@ -1,6 +1,7 @@
 ﻿using CommandeProduct.Models;
 using Microsoft.AspNetCore.Mvc;
 using CommandeProduct.Data;
+using System.Net;
 
 namespace CommandeProduct.Controllers
 {
@@ -22,5 +23,21 @@ namespace CommandeProduct.Controllers
             Repository.addClient(c);
             return View("ConfirmPage", c);
         }
+
+        /*public IActionResult updateClient(string id)
+        {
+            CPDbContext db = new CPDbContext();
+            Client c=db.Clients.Find(id);
+
+            return RedirectToAction("Client");
+        }*/
+
+        [HttpPost]
+        public IActionResult Delete(string id)
+        {
+            Repository.deleteClient(id);
+            return RedirectToAction("AllClients");
+        }
     }
+
 }

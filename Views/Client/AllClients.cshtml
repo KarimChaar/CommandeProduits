@@ -4,23 +4,25 @@
 
 @{
     <!DOCTYPE html>
-<html>
+    <html>
     <head>
         <title>AllClient</title>
         <style>
-        table.table-hover tbody tr:hover{
+            table.table-hover tbody tr:hover{
             background-color:#BCECE0;
-        }
-        
+            }
+
         </style>
     </head>
     <body>
+
         <h2>All clients page</h2>
+
         <table class="table table-bordred table-striped table-hover">
-        <thead>
-        <tr><th>nom</th><th colspan="3">adress</th><th>nom</th></tr>
-        </thead>
-        <tbody>
+            <thead>
+                <tr><th>nom</th><th colspan="3">adress</th><th>type</th><th>action</th></tr>
+            </thead>
+            <tbody>
                 @foreach (Client client in Model)
                 {
                     <tr>
@@ -29,11 +31,19 @@
                         <td>@client.LocationVille</td>
                         <td>@client.LocationPays</td>
                         <td>@client.Type_C</td>
+                        <td>
+
+                        @using(Html.BeginForm("Delete","Client",new {id = client.Cin})
+                        ){
+                            <input type="submit" value="Delete" class="btn btn-danger"/>
+                        }
+                        </td>
                         
                     </tr>
                 }
             </tbody>
         </table>
+        
     </body>
 </html>
 }
