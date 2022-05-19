@@ -1,4 +1,6 @@
-﻿namespace CommandeProduct.Models
+﻿using CommandeProduct.Data;
+
+namespace CommandeProduct.Models
 {
     public class Repository
     {
@@ -6,12 +8,16 @@
 
         public static IEnumerable<Client> getAllClients()
         {
+            CPDbContext db = new CPDbContext();
+            listeClients = db.Clients.ToList();
             return listeClients;
         }
 
         public static void addClient(Client c)
         {
-            listeClients.Add(c);
+            CPDbContext db = new CPDbContext();
+            db.Clients.Add(c);
+            db.SaveChanges();
         }
     }
 }

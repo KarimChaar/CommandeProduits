@@ -15,16 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Karim-Chaar\source\repos\CommandeProduct
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Karim-Chaar/source/repos/CommandeProduct/Views/Home/AllClients.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxDbGllbnRzLmNzaHRtbA==
+[C:/Users/Karim-Chaar/source/repos/CommandeProduct/Views/Client/AllClients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEFsbENsaWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Karim-Chaar/source/repos/CommandeProduct/Views/Home/Client.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDbGllbnQuY3NodG1s
+[C:/Users/Karim-Chaar/source/repos/CommandeProduct/Views/Client/Client.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XENsaWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Karim-Chaar/source/repos/CommandeProduct/Views/Home/ConfirmPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25maXJtUGFnZS5jc2h0bWw=
+[C:/Users/Karim-Chaar/source/repos/CommandeProduct/Views/Client/ConfirmPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XENvbmZpcm1QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Karim-Chaar/source/repos/CommandeProduct/Views/Home/Index.cshtml]

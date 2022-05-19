@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Client
+@{
+    <html>
+    <head>
+    <style>
+        .input-validation-error{
+            border: 1px solid darkred;
+            background-color:#ffcccb;
+        }
+        .validation-summary-errors{
+            color:red;
+            font-weight:bolder;
+        }
+
+    </style>
+    </head>
+    <body>
+    <h1>Hello from Client view </h1>
+    <div asp-validation-summary="All"></div>
+    <form asp-controller="Client" asp-action="client" method="post">
+        <h1>Client Form</h1>
+        <div class="form-group">
+            <label asp-for="Cin">CIN</label>
+            <input asp-for="Cin" class="form-control form-control-sm" placeholder="Enter identy card"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="ClientNom">Nom</label>
+            <input asp-for="ClientNom" class="form-control form-control-sm" placeholder="Enter your name"/>
+        </div>
+           Adresse
+        <div class="form-group">    
+            <label asp-for="LocationRue">Rue</label>
+            <input asp-for="LocationRue" class="form-control form-control-sm" placeholder="Enter your Street name"/>
+        </div>
+        <div class="form-group">    
+            <label asp-for="LocationVille">Ville</label>
+            <input asp-for="LocationVille" class="form-control form-control-sm" placeholder="Enter your town name"/>
+        </div>
+        <div class="form-group">    
+            <label asp-for="LocationPays">Pays</label>
+            <input asp-for="LocationPays" class="form-control form-control-sm" placeholder="Enter your country name"/>
+        </div>
+
+        <div class="form-group">    
+            <label asp-for="Type_C">Type</label>
+            <select asp-for="Type_C" asp-items="@Html.GetEnumSelectList<type>()" class="form-control form-control-sm">
+   <option selected="selected" value="">Please select</option>
+</select>
+        </div>
+        <button type="submit" class="btn btn-primary"> save</button>
+    </form>
+</body>
+</html>
+}

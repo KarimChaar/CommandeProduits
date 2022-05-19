@@ -1,4 +1,6 @@
-﻿namespace CommandeProduct.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CommandeProduct.Models
 {
     public enum type { professionnel, particulier };
 
@@ -43,12 +45,24 @@
         }
 
         public Client() { }
-
+        [Key]
+        public string Cin { get; set; }
+        [Required(ErrorMessage =" Name is missing")]
+        [StringLength(10,MinimumLength=3,ErrorMessage = "respect name length >2")]
+        [DataType(DataType.Text)]
         public string ClientNom { get; set; }
         //public Adresse Location { get; set; }
+        [Required(ErrorMessage = " street is missing")]
+        [DataType(DataType.Text)]
         public string LocationRue { get; set; }
+        [Required(ErrorMessage = " Town is missing")]
+        [DataType(DataType.Text)]
         public string LocationVille { get; set; }
+        [Required(ErrorMessage = " Country is missing")]
+        [DataType(DataType.Text)]
         public string LocationPays { get; set; }
+        [Required(ErrorMessage = "Type is missing")]
+        [DataType(DataType.Text)]
         public type Type_C { get; set; }
 
 
