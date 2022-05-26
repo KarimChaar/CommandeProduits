@@ -65,6 +65,8 @@ namespace CommandeProduct.Models
         [DataType(DataType.Text)]
         public type Type_C { get; set; }
 
+        public List<Commande> Commande { get; set; }
+
 
 
 

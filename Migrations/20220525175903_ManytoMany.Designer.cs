@@ -3,6 +3,7 @@ using CommandeProduct.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CommandeProduct.Migrations
 {
     [DbContext(typeof(CPDbContext))]
-    partial class CPDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220525175903_ManytoMany")]
+    partial class ManytoMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +50,7 @@ namespace CommandeProduct.Migrations
 
                     b.HasKey("Cin");
 
-                    b.ToTable("Clients", (string)null);
+                    b.ToTable("Clients");
                 });
 
             modelBuilder.Entity("CommandeProduct.Models.Commande", b =>
@@ -72,7 +74,7 @@ namespace CommandeProduct.Migrations
 
                     b.HasIndex("id_P");
 
-                    b.ToTable("Commandes", (string)null);
+                    b.ToTable("Commandes");
                 });
 
             modelBuilder.Entity("CommandeProduct.Models.Produit", b =>
@@ -96,7 +98,7 @@ namespace CommandeProduct.Migrations
 
                     b.HasKey("id_P");
 
-                    b.ToTable("Produits", (string)null);
+                    b.ToTable("Produits");
                 });
 
             modelBuilder.Entity("CommandeProduct.Models.Commande", b =>

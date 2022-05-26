@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+ <html>
+    <head>
+    <style>
+        .input-validation-error{
+            border: 1px solid darkred;
+            background-color:#ffcccb;
+        }
+        .validation-summary-errors{
+            color:red;
+            font-weight:bolder;
+        }
+
+    </style>
+    </head>
+    <body>
+    <h1>Hello from Client view </h1>
+    <div asp-validation-summary="All"></div>
+
+    <form asp-controller="Command" asp-action="addCommand" method="post">
+        <h1>Client Form</h1>
+       <!-- <div class="form-group">
+            <label asp-for="">les clients</label>
+            <select asp-for="" asp-items="" class="form-select" aria-label="Default select example">
+            <option selected> open this select menu </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="">les produits</label>
+            <select asp-for="" asp-items="" class="form-select" aria-label="Default select example">
+             <option selected> open this select menu </option>
+            </select>
+        </div>
+           Quantité
+        <div class="form-group">    
+            <label asp-for=""></label>
+            <input asp-for="" class="form-control form-control-sm" placeholder="Enter your Street name"/>
+        </div>-->
+        <button type="submit" class="btn btn-primary"> save</button>
+    </form>
+</body>
+</html>
+

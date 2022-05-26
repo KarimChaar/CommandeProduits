@@ -1,0 +1,26 @@
+﻿@model Produit
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form asp-contoller="Produit" asp-action="AddOrUpdateProduct" method="post">
+            <h1>Produit form</h1>
+            <input  type="hidden" asp-for="id_P" />
+            <div class="form-group">
+                <label asp-for="nom_P"> Nom </label>
+                <input asp-for="nom_P" class="form-control form-control-sm" placeholder="Nom du produit"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantite">Quantité</label>
+                <input asp-for="quantite" class="form-control form-control-sm" placeholder="la quantité du produit"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="marque">Marque</label>
+                <input asp-for="marque" class="form-control form-control-sm" placeholder="la Marque du produit"/>
+            </div>
+            <button type="submit"> Ajouter </button>
+        </form>
+
+    </body>
+</html>
